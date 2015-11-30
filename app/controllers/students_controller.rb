@@ -1,7 +1,10 @@
 class StudentsController < ApplicationController
+
   before_action :authenticate_user!
+
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
+  expose(:students) { Student.all.order(:last_name, :first_name)}
 
   def create
     if student.save
@@ -22,5 +25,10 @@ class StudentsController < ApplicationController
   def destroy
     student.destroy
     redirect_to students_path, notice: I18n.t('shared.deleted', resource: 'Student')
+  end
+  private
+
+  def student_params
+    params.require(:student).permit(:first_name, :last_name, subject_item_ids: [])
   end
 end
