@@ -1,3 +1,7 @@
+TravisCI badge
+================
+[![Build Status](https://travis-ci.org/babiracka/workshops.svg?branch=master)](https://travis-ci.org/babiracka/workshops)
+
 RoR Workshops
 ================
 
