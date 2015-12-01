@@ -1,6 +1,11 @@
-TravisCI badge
+TravisCI & Heroku
 ================
+
+### TravisCI badge
 [![Build Status](https://travis-ci.org/babiracka/workshops.svg?branch=master)](https://travis-ci.org/babiracka/workshops)
+
+### Link to app on Heroku
+[https://nguruwro.herokuapp.com/](https://nguruwro.herokuapp.com/)
 
 RoR Workshops
 ================
