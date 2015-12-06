@@ -1,5 +1,6 @@
 puts "Seeds: start"
 TEACHER_TITLES = %w(Dr. Prof. TA)
+SUBJECT_TITLES = %w(English Chinese Maths PE Programming)
 User.create!(email: 'admin@admin.com',password: 'adminadmin')
 
 3.times do
@@ -11,9 +12,9 @@ User.create!(email: 'admin@admin.com',password: 'adminadmin')
 end
 
 teachers = Teacher.all
-5.times do
+SUBJECT_TITLES.each  do |subject_title|
   SubjectItem.create!(
-    title: Faker::Lorem.sentence,
+    title: subject_title,
     teacher: teachers.sample
   )
 end

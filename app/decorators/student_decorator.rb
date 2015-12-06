@@ -8,4 +8,9 @@ class StudentDecorator < BaseDecorator
     avg = !avg.nil? ? avg.round(2).to_f : 0.0
     '%.2f' % avg
   end
+
+  def underscored_birthdate
+	    !birthdate.nil? ? birthdate.strftime('%Y-%m_%d') : 'n/a'
+	end
+  
 end
